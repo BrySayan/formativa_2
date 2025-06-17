@@ -14,6 +14,7 @@ const rules = {
         nombre: /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/,        // solo letras y espacios
         numeroDecimal: /^\d+(\.\d+)?$/,             // número con o sin decimal
         cantidad: /^\d+$/,                          // solo números
+        correo: /^[^\s@]+@[^\s@]+\.[^\s@]+$/        // Formato correo
         };
 
 const valores = [codigoInput, nombreInput, precioInput, descuentoInput, cantidadInput];
