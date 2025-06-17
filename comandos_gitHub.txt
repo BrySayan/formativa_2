@@ -1,0 +1,16 @@
+// Siempre inicien sesion con GitHub en el visual
+
+git config --global user.name "NombreDeTuUsuario"
+git config --global user.email "CorreoResgitradoEnGitHub"
+
+git init       // Iicializa el repositorio Git
+
+git checkout -b "nombre_rama"   // Se recomienda main
+
+git add .           // Agrega los archivos a tu proyecto
+
+git commit -m "nombre_commit"  // Crear primer commit
+
+git  remote add origin (Link de tu repositorio)
+
+git push -u origin "nombre_rama"   // Se recomiena main
