@@ -1,0 +1,59 @@
+Objetivo General:
+Desarrollar una aplicación web básica que permita registrar productos, almacenarlos en un array, y gestionar ventas, todo utilizando objetos en JavaScript y manipulando el DOM para reflejar los datos.
+
+1. Registrar productos
+  Captura el evento submit del formulario de productos.
+  Previene el comportamiento por defecto.
+  Obtén los valores de los campos del formulario.
+  Valida que todos los campos estén llenos. Si hay errores, muestra el texto en los <p class="help"> correspondientes. Con la clase is-danger da color rojo a los inputs y textos.
+  Crea un objeto producto con la siguiente estructura:
+    {
+    codigo: 'P001',
+    nombre: 'Ejemplo',
+    precio: 1000,
+    descuento: 10,
+    cantidad: 5
+    }
+  Añádelo al array productos.
+  Limpia el formulario.
+  Actualiza la tabla de productos en el DOM usando el array.
+
+2. Mostrar productos en tabla
+  Crea una función llamada renderizarProductos().
+  Recorre el array productos con forEach y muestra los datos en <tbody>.
+  Solo muestra código, nombre, precio y descuento.
+
+3. Buscar producto para venta
+  Captura el evento del botón “Buscar” del formulario de ventas.
+  Lee el valor del campo “Código producto”.
+  Busca en el array productos con find() si existe un producto con ese código.
+  Si lo encuentra, rellena los campos de nombre, precio y descuento en el formulario de ventas. Puede utilizar value para este proposito.
+  Si no lo encuentra, muestra una alerta o mensaje de error.
+
+4. Registrar una venta
+  Captura el evento submit del formulario de ventas.
+  Previene el comportamiento por defecto.
+  Valida que haya un producto cargado y que se haya ingresado una cantidad válida.
+  Calcula el precio final:
+    precioFinal = precio * cantidad * (1 - descuento / 100);
+  Crea un objeto venta:
+    {
+      codigo: 'P001',
+      nombre: 'Ejemplo',
+      precio: 1000,
+      descuento: 10,
+      cantidad: 2,
+      precioFinal: 1800
+    }
+  Añádelo al array ventas.
+  Limpia el formulario.
+  Actualiza la tabla de ventas.
+
+5. Mostrar ventas en tabla
+  Crea una función renderizarVentas() que recorra el array ventas y actualice el DOM con los datos.
+  Muestra: código, nombre, precio, descuento, cantidad y precio final.
+
+6. Extras
+  Validar que no se puedan registrar dos productos con el mismo código.
+  Mostrar un total acumulado de las ventas en el <tfoot> de la tabla.
+  Controlar que no se pueda vender más cantidad que la disponible en stock.
